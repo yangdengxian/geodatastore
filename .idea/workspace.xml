@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="de8d04b2-bbcf-4ca2-9593-f27e22ddf3fc" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="E:/Program Files/apache-maven/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="E:\Program Files\apache-maven\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+    <option name="vmOptions" value="-DarchetypeCatalog=internal" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1pWO4zQS2PcTGylTJ17sz4L7hyl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\git\geodatastore\geodatastore-zk\src\test\java\com\geodatastore\zk" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="PostgisDataStore" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.geodatastore.postgis.PostgisDataStore" />
+      <module name="geodatastore-postgis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.geodatastore.postgis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PostgisDataStore" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../geotrellis-chatta-demo-master/service/geotrellis" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../geotrellis-chatta-demo/service/geotrellis" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../geotrellis-sbt-template" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../geotrellis-server" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="de8d04b2-bbcf-4ca2-9593-f27e22ddf3fc" name="Default Changelist" comment="" />
+      <created>1615295192249</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615295192249</updated>
+      <workItem from="1615295196395" duration="7571000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1615298747228">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615298747228" />
+    <state width="505" height="466" key="DebuggerActiveHint" timestamp="1615302458501">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="505" height="466" key="DebuggerActiveHint/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615302458501" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1615302537147">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615302537147" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1615302537147">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.center/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615302537147" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1615302537147">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.left/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615302537147" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1615302537147">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.right/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615302537147" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1615302443430">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615302443430" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1615302443430">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615302443430" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1615302443430">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615302443430" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1615302443430">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615302443430" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1615295633973">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615295633973" />
+    <state x="334" y="214" key="new project wizard" timestamp="1615295941718">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="334" y="214" key="new project wizard/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615295941718" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="type" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
