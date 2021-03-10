@@ -4,12 +4,16 @@ import org.geotools.data.*;
 import org.geotools.data.collection.ListFeatureCollection;
 import org.geotools.data.postgis.PostgisNGDataStoreFactory;
 import org.geotools.data.simple.SimpleFeatureCollection;
+import org.geotools.data.simple.SimpleFeatureIterator;
 import org.geotools.data.simple.SimpleFeatureSource;
 import org.geotools.data.simple.SimpleFeatureStore;
 import org.geotools.feature.simple.SimpleFeatureBuilder;
 import org.geotools.feature.simple.SimpleFeatureTypeImpl;
+import org.geotools.filter.text.cql2.CQL;
+import org.geotools.filter.text.cql2.CQLException;
 import org.geotools.geometry.jts.ReferencedEnvelope;
 import org.locationtech.jts.geom.Coordinate;
+import org.locationtech.jts.geom.Geometry;
 import org.locationtech.jts.geom.GeometryFactory;
 import org.locationtech.jts.geom.Point;
 import org.opengis.feature.simple.SimpleFeature;
@@ -67,8 +71,8 @@ public class PostgisDataStore {
             point = geometryFactory.createPoint(new Coordinate(lon,lat));
             List<Object> resultList = new ArrayList<>();
             resultList.add(point);
-            resultList.add(1314);
-            resultList.add("abcdfs");
+            resultList.add(5678);
+            resultList.add("erftg");
             featureBuilder.addAll(resultList);
 
             feature = featureBuilder.buildFeature("poi1");
@@ -79,33 +83,16 @@ public class PostgisDataStore {
         return feature;
     };
 
-    public SimpleFeatureCollection getFeaturesCollection(SimpleFeatureType type,List<SimpleFeature> features) throws IOException{
-        SimpleFeatureCollection collection = new ListFeatureCollection(type,features);
-        return  collection;
-    }
 
-    public void  insertData(List<SimpleFeature> features) throws IOException {
-
-    }
-
-    public static void main(String[] args) throws IOException {
-        PostgisDataStore postgisDataStore = new PostgisDataStore();
-        Map<String, Object> params = new HashMap<>();
-        params.put(PostgisNGDataStoreFactory.HOST.key, "localhost");
-        params.put(PostgisNGDataStoreFactory.SCHEMA.key, "public");
-        params.put(PostgisNGDataStoreFactory.DATABASE.key, "postgres");
-        params.put(PostgisNGDataStoreFactory.USER.key, "postgres");
-        params.put(PostgisNGDataStoreFactory.PASSWD.key,  "postgres");
-        DataStore dataStore = postgisDataStore.getDataStore(params);
-
-        SimpleFeature feature = postgisDataStore.createSimplePointFeatureByLonLat(112.1,38.1);
+    public void  insertPointByLonLat(Double lon,Double lat) throws IOException {
+        SimpleFeature feature = createSimplePointFeatureByLonLat(lon,lat);
         List<SimpleFeature> features = new ArrayList<>();
         features.add(feature);
-        SimpleFeatureSource featureSource = dataStore.getFeatureSource(postgisDataStore.tableName);
+        SimpleFeatureSource featureSource = dataStore.getFeatureSource(tableName);
 
         if( featureSource instanceof SimpleFeatureStore){
             SimpleFeatureStore featureStore = (SimpleFeatureStore) featureSource;
-            SimpleFeatureCollection featureCollection= postgisDataStore.getFeaturesCollection(postgisDataStore.type,features);
+            SimpleFeatureCollection featureCollection = new ListFeatureCollection(type,features);
             //创建事务
             Transaction session = new DefaultTransaction("Adding");
             featureStore.setTransaction( session );
@@ -124,6 +111,45 @@ public class PostgisDataStore {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
+            }
+        }
+    }
+
+    public SimpleFeatureCollection queryFeatures(String cql_filter) throws Exception {
+        SimpleFeatureSource featureSource = null;
+        SimpleFeatureCollection featureCollection = null;
+        Filter filter = CQL.toFilter(cql_filter);
+        Query query = new Query("pois",filter);
+        if (dataStore != null) {
+            featureSource = dataStore.getFeatureSource(tableName);
+            SimpleFeatureStore featureStore = (SimpleFeatureStore) featureSource;
+            featureCollection = featureStore.getFeatures(query);
+        } else {
+            throw new Exception("数据库连接未成功");
+        }
+        return featureCollection;
+    }
+
+    public static void main(String[] args) throws Exception {
+        PostgisDataStore postgisDataStore = new PostgisDataStore();
+        Map<String, Object> params = new HashMap<>();
+        params.put(PostgisNGDataStoreFactory.HOST.key, "localhost");
+        params.put(PostgisNGDataStoreFactory.SCHEMA.key, "public");
+        params.put(PostgisNGDataStoreFactory.DATABASE.key, "postgres");
+        params.put(PostgisNGDataStoreFactory.USER.key, "postgres");
+        params.put(PostgisNGDataStoreFactory.PASSWD.key,  "postgres");
+        DataStore dataStore = postgisDataStore.getDataStore(params);
+
+//        postgisDataStore.insertPointByLonLat(108.21,38.34);
+
+        SimpleFeatureCollection featureCollection = postgisDataStore.queryFeatures("uid = 'abcdfs'");
+        List<Object> attributes = new ArrayList<>();
+        try (SimpleFeatureIterator iterator = featureCollection.features()) {
+            while (iterator.hasNext()) {
+                SimpleFeature feature = iterator.next();
+                Geometry geom = (Geometry) feature.getDefaultGeometry();
+                Point centroid = geom.getCentroid();
+                attributes = feature.getAttributes();
             }
         }
     }
