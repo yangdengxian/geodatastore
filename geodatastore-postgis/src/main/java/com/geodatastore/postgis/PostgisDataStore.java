@@ -69,6 +69,7 @@ public class PostgisDataStore {
             type = simpleFeatureSource.getSchema();
             SimpleFeatureBuilder featureBuilder = new SimpleFeatureBuilder(type);
             point = geometryFactory.createPoint(new Coordinate(lon,lat));
+            //属性值顺序与SimpleFeatureType对应
             List<Object> resultList = new ArrayList<>();
             resultList.add(point);
             resultList.add(5678);
@@ -141,7 +142,6 @@ public class PostgisDataStore {
         DataStore dataStore = postgisDataStore.getDataStore(params);
 
 //        postgisDataStore.insertPointByLonLat(108.21,38.34);
-
         SimpleFeatureCollection featureCollection = postgisDataStore.queryFeatures("uid = 'abcdfs'");
         List<Object> attributes = new ArrayList<>();
         try (SimpleFeatureIterator iterator = featureCollection.features()) {
