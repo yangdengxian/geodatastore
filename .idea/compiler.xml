@@ -9,6 +9,7 @@
         <module name="geodatastore-postgis" />
         <module name="geodatastore-zk" />
         <module name="geodatastore-hbase" />
+        <module name="geodatastore-Kafka" />
       </profile>
     </annotationProcessing>
   </component>
