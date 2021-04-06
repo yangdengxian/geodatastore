@@ -11,6 +11,8 @@
     <module>geodatastore-hbase</module>
     <module>geodatastore-postgis</module>
     <module>geodatastore-zk</module>
+    <module>geodatastore-Kafka</module>
+    <module>geodatastore-Kafka</module>
   </modules>
   <packaging>pom</packaging>
 
